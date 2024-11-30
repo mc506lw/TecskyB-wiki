@@ -46,7 +46,7 @@
                 </div>
 
                 <!-- 搜索框 -->
-                <div class="relative mt-4 md:mt-0">
+                <!-- <div class="relative mt-4 md:mt-0">
                     <span class="absolute inset-y-0 left-0 flex items-center pl-3">
                         <svg class="w-5 h-5 text-gray-400" viewBox="0 0 24 24" fill="none">
                             <path
@@ -59,7 +59,7 @@
                     <input type="text"
                         class="w-full py-2 pl-10 pr-4 text-gray-700 bg-white border rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300"
                         placeholder="搜索">
-                </div>
+                </div> -->
             </div>
         </div>
     </nav>
