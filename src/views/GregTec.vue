@@ -1,0 +1,136 @@
+<template>
+    <div class="min-h-[80vh] flex mx-8 p-6">
+      <!-- 左侧列表 -->
+      <VoltageProgressTree data-aos="fade-right"
+        :voltages="voltages"
+        @selectVoltage="selectedVoltage = $event"
+      />
+  
+      <!-- 右侧内容 -->
+      <div data-aos="fade-left" class="flex-1 bg-white p-4 rounded-lg shadow">
+        <h2 class="font-bold text-4xl mb-4">{{ selectedVoltage.name }} 阶段攻略</h2>
+        <div v-if="selectedVoltage">
+          <!-- 所需材料 -->
+          <h3 class="font-bold mb-2">所需材料和机器</h3>
+          <ul class="list-disc pl-5 mb-4">
+            <li v-for="item in selectedVoltage.materials" :key="item">{{ item }}</li>
+          </ul>
+  
+          <!-- 关键配方 -->
+          <h3 class="font-bold mb-2">关键配方</h3>
+          <div class="flex my-2 space-x-4" v-for="recipe in selectedVoltage.recipes" :key="recipe.name">
+            <div class="w-1/2 p-4 border rounded-lg shadow-sm bg-white">
+              <div class="flex items-center space-x-4">
+                <img :src="recipe.image" class="object-cover h-16 w-16">
+                <div>
+                  <h2 class="font-bold">{{ recipe.name }}</h2>
+                  <p class="text-gray-600">{{ recipe.description }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <!-- TACZ武器 -->
+          <h3 class="font-bold mb-2">可制作的TACZ武器</h3>
+          <div class="flex my-2 space-x-4" v-for="weapon in selectedVoltage.weapons" :key="weapon.name">
+            <div class="w-1/2 p-4 border rounded-lg shadow-sm bg-white">
+              <div class="flex items-center space-x-4">
+                <img :src="weapon.image" class="object-cover h-16 w-16">
+                <div>
+                  <h2 class="font-bold">{{ weapon.name }}</h2>
+                  <p class="text-gray-600">{{ weapon.description }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+  
+  <script>
+  import VoltageProgressTree from "../components/VoltageProgressTree.vue";
+  
+  export default {
+    components: { VoltageProgressTree },
+    data() {
+      return {
+        selectedVoltage: {
+          name: 'LV - 低压',
+          materials: ['熟铁电路板 x8', '钢锭 x4', '锡合金线 x16', '蒸汽动力锯', '基础压缩机'],
+          recipes: [
+            {
+              name: '紫砂电路板',
+              description: '铜板 + 红石 + 电路板',
+              image: 'https://www.idcd.com/tool/placeholder/300x300?text=300x300',
+            },
+          ],
+          weapons: [
+            {
+              name: 'AK-47',
+              description: 'AK-47枪身 + 弹夹 + ？',
+              image: 'https://www.idcd.com/tool/placeholder/300x300?text=300x300',
+            },
+            {
+              name: 'RPG-7',
+              description: 'RPG-7枪身 + 炮弹 + ？',
+              image: 'https://www.idcd.com/tool/placeholder/300x300?text=300x300',
+            },
+          ],
+        },
+        voltages: [
+          {
+            name: 'LV - 低压',
+            value: '32 EU/t',
+            materials: ['熟铁电路板 x8', '钢锭 x4', '锡合金线 x16', '蒸汽动力锯', '基础压缩机'],
+            recipes: [
+              {
+                name: '紫砂电路板',
+                description: '铜板 + 红石 + 电路板',
+                image: 'https://www.idcd.com/tool/placeholder/300x300?text=300x300',
+              },
+            ],
+            weapons: [
+              {
+                name: 'AK-47',
+                description: 'AK-47枪身 + 弹夹 + ？',
+                image: 'https://www.idcd.com/tool/placeholder/300x300?text=300x300',
+              },
+              {
+                name: 'RPG-7',
+                description: 'RPG-7枪身 + 炮弹 + ？',
+                image: 'https://www.idcd.com/tool/placeholder/300x300?text=300x300',
+              },
+            ],
+          },
+          {
+            name: 'MV - 中压',
+            value: '128 EU/t',
+            materials: ['钢电路板 x10', '高压线缆 x5', '锂电池'],
+            recipes: [
+              {
+                name: '高压电池',
+                description: '钢板 + 锂电芯',
+                image: 'https://www.idcd.com/tool/placeholder/300x300?text=300x300',
+              },
+            ],
+            weapons: [
+              {
+                name: '手枪',
+                description: '手枪零件 + 枪膛',
+                image: 'https://www.idcd.com/tool/placeholder/300x300?text=300x300',
+              },
+              {
+                name: '狙击枪',
+                description: '狙击枪身 + 瞄准镜 + 枪托',
+                image: 'https://www.idcd.com/tool/placeholder/300x300?text=300x300',
+              },
+            ],
+          },
+          // 其他电压等级配置...
+        ],
+      };
+    },
+  };
+  </script>
+  
