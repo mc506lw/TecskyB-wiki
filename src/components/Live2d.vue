@@ -9,7 +9,7 @@ import { loadOml2d } from 'oh-my-live2d';
 
 // 直接初始化 Live2D 模型
 const oml2d = loadOml2d({
-    mobileDisplay: false,
+    mobileDisplay: true,
     models: [
         {
             path: '/mc506lw/L2DMCVT.model3.json',
