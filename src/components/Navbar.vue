@@ -88,10 +88,10 @@ export default {
             isActive,
             links: [
                 { name: '首页', to: '/home' },
-                { name: '格雷科技进度', to: '/gregtech' },
-                { name: 'TACZ武器图鉴', to: '/tacz' },
-                { name: '如何进入', to: '/join' },
-                { name: '帮助', to: '/help' }, // 帮助页面及其子页面
+                { name: '入服先看', to: '/join' },
+                { name: '萌新攻略', to: '/help' },
+                { name: '格雷进度', to: '/gregtech' },
+                { name: 'TACZ图鉴', to: '/tacz' },
             ],
         };
     },

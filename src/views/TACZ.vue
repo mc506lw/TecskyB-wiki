@@ -1,7 +1,7 @@
 <template>
-    <div class="min-h-[80vh] flex flex-col p-4 sm:p-6 mx-4 sm:mx-8">
+    <div class="min-h-[80vh] flex flex-col md:flex-row p-4 sm:p-6 mx-4 sm:mx-8">
       <!-- 左侧菜单 -->
-      <div data-aos="fade-right" class="p-4">
+      <div data-aos="fade-right" class="p-2 flex-1 md:max-w-[25%]">
         <WeaponCategory
           :categories="categories"
           @selectCategory="handleCategorySelect"
@@ -9,7 +9,7 @@
       </div>
     
       <!-- 右侧内容 -->
-      <div data-aos="fade-left" class="p-4">
+      <div data-aos="fade-left" class="p-2 flex-1">
         <WeaponGrid :weapons="filteredWeapons" />
       </div>
     </div>

@@ -4,11 +4,11 @@
     <VoltageProgressTree data-aos="fade-right"
       :voltages="voltages"
       @selectVoltage="selectedVoltage = $event"
-      class="w-full md:w-1/2"
+      class="w-full md:w-1/2 p-2"
     />
 
     <!-- 右侧内容 -->
-    <div data-aos="fade-left" class="flex-1 bg-white p-4 rounded-lg shadow w-full md:min-h-[70vh] ml-4">
+    <div data-aos="fade-left" class="flex-1 bg-white p-2 rounded-lg shadow w-full md:h-[70vh] ml-4 overflow-x-auto ">
       <h2 class="font-bold text-4xl mb-4">{{ selectedVoltage.name }} 阶段攻略</h2>
       <div v-if="selectedVoltage">
         <!-- 所需材料 -->
@@ -92,6 +92,16 @@ export default {
             },
           ],
           weapons: [
+            {
+              name: 'AK-47',
+              description: 'AK-47枪身 + 弹夹 + ？',
+              image: 'https://www.idcd.com/tool/placeholder/300x300?text=300x300',
+            },
+            {
+              name: 'RPG-7',
+              description: 'RPG-7枪身 + 炮弹 + ？',
+              image: 'https://www.idcd.com/tool/placeholder/300x300?text=300x300',
+            },
             {
               name: 'AK-47',
               description: 'AK-47枪身 + 弹夹 + ？',
