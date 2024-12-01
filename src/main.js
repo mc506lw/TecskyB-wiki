@@ -1,20 +1,19 @@
-   // 创建 Vue 应用程序的入口文件
-   import { createApp } from 'vue';
-   import App from './App.vue';
-   import './style.css';
-   import router from './router'; // 引入路由
-   import AOS from 'aos'; // 引入 aos.js
-   import 'aos/dist/aos.css'; // 引入 aos.js 的样式文件
+import { createApp } from 'vue';
+import App from './App.vue';
+import './style.css';
+import AOS from 'aos'; // 引入 AOS.js
+import 'aos/dist/aos.css'; // 引入 AOS 样式文件
+import router, { initDynamicRoutes } from './router'; // 引入路由和动态路由初始化方法
 
-   // 创建 Vue 应用实例
-   const app = createApp(App);
+// 创建 Vue 应用实例
+const app = createApp(App);
 
-   // 引入 aos.js
-   AOS.init();
+// 初始化 AOS.js
+AOS.init();
 
-   // 使用路由
-   app.use(router);
+async function bootstrap() {
+  await initDynamicRoutes(); // 初始化动态路由
+  app.use(router).mount('#app'); // 挂载应用
+}
 
-   // 挂载 Vue 应用到指定的 DOM 元素上
-   app.mount('#app');
-   
+bootstrap();
