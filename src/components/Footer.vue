@@ -1,7 +1,8 @@
 <template>
   <footer class="bg-gray-100 p-6">
     <div class="container mx-auto">
-      <div class="flex justify-between">
+      <!-- 使用 Tailwind CSS 的 grid 布局来适配手机端 -->
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-4">
         <div>
           <h3 class="font-bold">服务器信息</h3>
           <p>IP: play.example.com</p>
@@ -20,8 +21,8 @@
         <div class="flex flex-col items-center">
           <h3 class="font-bold">赞助支持</h3>
           <button class="icon icon-shixintaoxin my-2 px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-lg hover:bg-blue-500">
-    赞助我们
-</button>
+            赞助我们
+          </button>
         </div>
       </div>
       <div class="text-center mt-6">
