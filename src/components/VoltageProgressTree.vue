@@ -44,7 +44,7 @@ export default {
   },
   data() {
     return {
-      selectedName: 'LV - 低压', // 用来标记当前选中的电压等级
+      selectedName: '蒸汽时代', // 用来标记当前选中的电压等级
       mobileMenuOpen: false, // 是否展开移动端下拉菜单
     };
   },

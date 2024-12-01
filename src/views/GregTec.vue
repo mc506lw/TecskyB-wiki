@@ -1,24 +1,21 @@
 <template>
   <div class="min-h-[80vh] flex flex-col md:flex-row items-center p-4 sm:p-6 mx-4 sm:mx-8">
     <!-- 左侧列表 -->
-    <VoltageProgressTree data-aos="fade-right"
-      :voltages="voltages"
-      @selectVoltage="selectedVoltage = $event"
-      class="w-full md:w-1/2 p-2"
-    />
+    <VoltageProgressTree data-aos="fade-right" :voltages="voltages" @selectVoltage="selectedVoltage = $event"
+      class="w-full md:w-1/2 p-2" />
 
     <!-- 右侧内容 -->
     <div data-aos="fade-left" class="flex-1 bg-white p-2 rounded-lg shadow w-full md:h-[70vh] ml-4 overflow-x-auto ">
       <h2 class="font-bold text-4xl mb-4">{{ selectedVoltage.name }} 阶段攻略</h2>
       <div v-if="selectedVoltage">
         <!-- 所需材料 -->
-        <h3 class="font-bold mb-2">所需材料和机器</h3>
+        <h3 class="font-bold mb-2">主要技术</h3>
         <ul class="list-disc pl-5 mb-4">
           <li v-for="item in selectedVoltage.materials" :key="item">{{ item }}</li>
         </ul>
 
         <!-- 关键配方 -->
-        <h3 class="font-bold mb-2">关键配方</h3>
+        <h3 class="font-bold mb-2">关键科技</h3>
         <div class="flex flex-wrap my-2 space-x-4" v-for="recipe in selectedVoltage.recipes" :key="recipe.name">
           <div class="w-full md:w-1/2 p-4 border rounded-lg shadow-sm bg-white">
             <div class="flex items-center space-x-4">
@@ -57,7 +54,7 @@ export default {
   data() {
     return {
       selectedVoltage: {
-        name: 'LV - 低压',
+        name: '蒸汽时代',
         materials: ['熟铁电路板 x8', '钢锭 x4', '锡合金线 x16', '蒸汽动力锯', '基础压缩机'],
         recipes: [
           {
@@ -80,6 +77,25 @@ export default {
         ],
       },
       voltages: [
+        {
+          name: '蒸汽时代',
+          value: '没电',
+          materials: ['钢电路板 x10', '高压线缆 x5', '锂电池'],
+          recipes: [
+            {
+              name: '高压电池',
+              description: '钢板 + 锂电芯',
+              image: 'https://www.idcd.com/tool/placeholder/300x300?text=300x300',
+            },
+          ],
+          weapons: [
+            {
+              name: '手枪',
+              description: '手枪零件 + 枪膛',
+              image: 'https://www.idcd.com/tool/placeholder/300x300?text=300x300',
+            },
+          ],
+        },
         {
           name: 'LV - 低压',
           value: '32 EU/t',
@@ -138,7 +154,120 @@ export default {
             },
           ],
         },
-        // 其他电压等级配置...
+        {
+          name: 'HV - 高压',
+          value: '128 EU/t',
+          materials: ['钢电路板 x10', '高压线缆 x5', '锂电池'],
+          recipes: [
+            {
+              name: '高压电池',
+              description: '钢板 + 锂电芯',
+              image: 'https://www.idcd.com/tool/placeholder/300x300?text=300x300',
+            },
+          ],
+          weapons: [
+            {
+              name: '手枪',
+              description: '手枪零件 + 枪膛',
+              image: 'https://www.idcd.com/tool/placeholder/300x300?text=300x300',
+            },
+          ],
+        },
+        {
+          name: 'EV - 超高压',
+          value: '128 EU/t',
+          materials: ['钢电路板 x10', '高压线缆 x5', '锂电池'],
+          recipes: [
+            {
+              name: '高压电池',
+              description: '钢板 + 锂电芯',
+              image: 'https://www.idcd.com/tool/placeholder/300x300?text=300x300',
+            },
+          ],
+          weapons: [
+            {
+              name: '手枪',
+              description: '手枪零件 + 枪膛',
+              image: 'https://www.idcd.com/tool/placeholder/300x300?text=300x300',
+            },
+          ],
+        },
+        {
+          name: 'IV - 超导压',
+          value: '128 EU/t',
+          materials: ['钢电路板 x10', '高压线缆 x5', '锂电池'],
+          recipes: [
+            {
+              name: '高压电池',
+              description: '钢板 + 锂电芯',
+              image: 'https://www.idcd.com/tool/placeholder/300x300?text=300x300',
+            },
+          ],
+          weapons: [
+            {
+              name: '手枪',
+              description: '手枪零件 + 枪膛',
+              image: 'https://www.idcd.com/tool/placeholder/300x300?text=300x300',
+            },
+          ],
+        },
+        {
+          name: 'LUV - 剧差压',
+          value: '128 EU/t',
+          materials: ['钢电路板 x10', '高压线缆 x5', '锂电池'],
+          recipes: [
+            {
+              name: '高压电池',
+              description: '钢板 + 锂电芯',
+              image: 'https://www.idcd.com/tool/placeholder/300x300?text=300x300',
+            },
+          ],
+          weapons: [
+            {
+              name: '手枪',
+              description: '手枪零件 + 枪膛',
+              image: 'https://www.idcd.com/tool/placeholder/300x300?text=300x300',
+            },
+          ],
+        },
+        {
+          name: 'ZPM - 零点压',
+          value: '128 EU/t',
+          materials: ['钢电路板 x10', '高压线缆 x5', '锂电池'],
+          recipes: [
+            {
+              name: '高压电池',
+              description: '钢板 + 锂电芯',
+              image: 'https://www.idcd.com/tool/placeholder/300x300?text=300x300',
+            },
+          ],
+          weapons: [
+            {
+              name: '手枪',
+              description: '手枪零件 + 枪膛',
+              image: 'https://www.idcd.com/tool/placeholder/300x300?text=300x300',
+            },
+          ],
+        },
+        {
+          name: 'UV - 极限压',
+          value: '128 EU/t',
+          materials: ['钢电路板 x10', '高压线缆 x5', '锂电池'],
+          recipes: [
+            {
+              name: '高压电池',
+              description: '钢板 + 锂电芯',
+              image: 'https://www.idcd.com/tool/placeholder/300x300?text=300x300',
+            },
+          ],
+          weapons: [
+            {
+              name: '手枪',
+              description: '手枪零件 + 枪膛',
+              image: 'https://www.idcd.com/tool/placeholder/300x300?text=300x300',
+            },
+          ],
+        },
       ],
     };
   },
