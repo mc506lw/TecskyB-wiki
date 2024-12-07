@@ -3,28 +3,51 @@
 @tailwind utilities;
 
 .icon {
-    font-family: "iconfont" !important;
-    font-style: normal;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  font-family: "iconfont" !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* 通用浏览器隐藏横向滚动条 */
 body {
-    overflow-x: hidden; /* 禁止横向滚动 */
-  }
-  
-  /* 对于 Webkit 内核浏览器（如 Chrome, Safari） */
-  body::-webkit-scrollbar {
-    display: none; /* 隐藏滚动条 */
-  }
-  
-  /* 针对 Firefox */
-  body {
-    scrollbar-width: none; /* 隐藏滚动条 */
-  }
-  
-  /* 针对 Edge 和 IE */
-  body {
-    -ms-overflow-style: none; /* 隐藏滚动条 */
-  }
+  overflow-x: hidden;
+  /* 禁止横向滚动 */
+}
+
+/* 对于 Webkit 内核浏览器（如 Chrome, Safari） */
+body::-webkit-scrollbar {
+  display: none;
+  /* 隐藏滚动条 */
+}
+
+/* 针对 Firefox */
+body {
+  scrollbar-width: none;
+  /* 隐藏滚动条 */
+}
+
+/* 针对 Edge 和 IE */
+body {
+  -ms-overflow-style: none;
+  /* 隐藏滚动条 */
+}
+
+.dark .icon-white {
+  color: #fff;
+}
+
+.dark .dw {
+  color: #fff;
+  transition: color 0.3s ease-in-out;
+}
+
+.dark .dbg {
+  background-color: #222;
+  transition: color 0.3s ease-in-out;
+}
+
+.dark .dbg1 {
+  background-color: #333;
+  transition: color 0.3s ease-in-out;
+}

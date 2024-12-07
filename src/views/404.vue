@@ -16,7 +16,7 @@
                 未找到你访问的页面
             </p>
             <p class="output mb-2">
-                请尝试 <a href="/" class="text-blue-300 hover:underline">回到主页</a>
+                请尝试 <a href="/#/home" class="text-blue-300 hover:underline">回到主页</a>
             </p>
             <p class="output">感谢配合</p>
         </div>

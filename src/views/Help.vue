@@ -1,16 +1,16 @@
 <template>
-    <div class="min-h-[80vh] flex flex-col sm:flex-row mx-4 sm:mx-8 p-4 sm:p-6">
+    <div class="min-h-[80vh] flex flex-col sm:flex-row dark:bg-black transition-colors duration-300 p-4 sm:p-6">
         <!-- 左侧 Wiki 目录 -->
-        <div data-aos="fade-right" class="p-4 w-full sm:w-1/4 bg-gray-50 rounded shadow mb-4 sm:mb-0">
+        <div data-aos="fade-right" class="p-4 w-full sm:w-1/4 bg-gray-50 rounded shadow mb-4 sm:mb-0 dbg">
             <Transition name="slide-fade">
                 <WikiSidebar :wikiList="wikiList" @select-wiki="loadWikiContent" />
             </Transition>
         </div>
 
         <!-- 右侧 Wiki 内容 -->
-        <div data-aos="fade-left" class="p-4 w-full sm:w-3/4 rounded shadow">
+        <div data-aos="fade-left" class="p-4 w-full sm:w-3/4 rounded shadow dbg md:ml-4">
             <!-- 使用 MarkdownViewer 渲染 Markdown 文件内容 -->
-            <MarkdownViewer :content="currentWikiContent" />
+            <MarkdownViewer :content="currentWikiContent" class="dw" />
         </div>
     </div>
 </template>

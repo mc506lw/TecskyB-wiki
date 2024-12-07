@@ -1,5 +1,5 @@
 <template>
-    <div class="min-h-[80vh] flex flex-col md:flex-row p-4 sm:p-6 mx-4 sm:mx-8">
+    <div class="min-h-[80vh] flex flex-col md:flex-row p-4 sm:p-6 dark:bg-black transition-colors duration-300">
       <!-- 左侧菜单 -->
       <div data-aos="fade-right" class="p-2 flex-1 md:max-w-[25%]">
         <WeaponCategory

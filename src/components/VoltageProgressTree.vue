@@ -1,9 +1,9 @@
 <template>
-  <div class="w-full md:w-1/4 md:min-h-[70vh] bg-white p-4 rounded-lg shadow">
-    <h2 class="font-bold mb-4">电压等级进度树</h2>
+  <div class="w-full md:w-1/4 md:min-h-[70vh] bg-white p-4 rounded-lg shadow dbg">
+    <h2 class="font-bold mb-4 dw">电压等级进度树</h2>
     <!-- 移动端下拉菜单按钮 -->
     <button
-      class="block w-full mb-4 bg-blue-500 text-white font-bold py-2 rounded-lg md:hidden lg:hidden xl:hidden"
+      class="block w-full mb-4 bg-blue-500 text-white font-bold py-2 rounded-lg md:hidden lg:hidden xl:hidden dw"
       @click="toggleMobileMenu"
     >
       {{ mobileMenuOpen ? '收起' : '展开' }}
@@ -14,8 +14,8 @@
         v-for="item in voltages"
         :key="item.name"
         @click="selectVoltage(item)"
-        class="cursor-pointer p-2 shadow rounded font-bold hover:bg-blue-100"
-        :class="{ 'bg-gray-200': item.name === selectedName }"
+        class="cursor-pointer p-2 shadow rounded font-bold hover:bg-blue-100 dark:hover:bg-gray-500 dw"
+        :class="{ 'bg-gray-200 dark:bg-gray-700': item.name === selectedName }"
       >
         <div>{{ item.name }}</div>
         <div class="font-normal">{{ item.value }}</div>
@@ -27,8 +27,8 @@
         v-for="item in voltages"
         :key="item.name"
         @click="selectVoltage(item)"
-        class="mb-4 cursor-pointer p-2 shadow rounded font-bold hover:bg-blue-100"
-        :class="{ 'bg-gray-200': item.name === selectedName }"
+        class="mb-4 cursor-pointer p-2 shadow rounded font-bold hover:bg-blue-100 dark:hover:bg-gray-500 dw"
+        :class="{ 'bg-gray-200 dark:bg-gray-700': item.name === selectedName }"
       >
         {{ item.name }}
         <div class="font-normal">{{ item.value }}</div>

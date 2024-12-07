@@ -3,7 +3,7 @@
     <div
       v-for="weapon in weapons"
       :key="weapon.name"
-      class="bg-white shadow rounded-lg p-4"
+      class="bg-white shadow rounded-lg p-4 dbg dw"
     >
       <div class="lg:flex grid grid-cols-2 items-center p-4">
         <img
@@ -16,17 +16,17 @@
         </div>
       </div>
       <div class="p-4">
-        <p class="font-bold mb-2">基础属性</p>
-        <div class="flex gap-8 mb-2">
+        <p class="font-bold mb-2 dw">基础属性</p>
+        <div class="flex gap-8 mb-2 dw">
           <div>伤害: {{ weapon.damage }}</div>
           <div>攻速: {{ weapon.attackSpeed }}</div>
         </div>
-        <div class="flex gap-8 mb-2">
+        <div class="flex gap-8 mb-2 dw">
           <div>充能速度: {{ weapon.chargeRate }}</div>
           <div>最大能量: {{ weapon.maxEnergy }}</div>
         </div>
-        <p class="font-bold mb-2">制作材料</p>
-        <ul class="list-disc list-inside">
+        <p class="font-bold mb-2 dw">制作材料</p>
+        <ul class="list-disc list-inside dw">
           <li v-for="material in weapon.materials" :key="material">
             {{ material }}
           </li>

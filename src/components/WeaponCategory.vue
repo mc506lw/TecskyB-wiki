@@ -1,16 +1,16 @@
 <template>
-  <div class="bg-white shadow rounded-lg p-4">
-    <div class="text-xl font-bold mb-4">武器分类</div>
+  <div class="bg-white shadow rounded-lg p-4 dbg">
+    <div class="text-xl font-bold mb-4 dw">武器分类</div>
     <div class="space-y-4">
       <div
         v-for="category in categories"
         :key="category.name"
         class="border rounded-lg p-4 shadow-sm cursor-pointer"
-        :class="{ 'bg-gray-200': selectedCategory === category.name }"
+        :class="{ 'bg-gray-200 dark:bg-slate-500': selectedCategory === category.name }"
         @click="selectCategory(category.name)"
       >
-        <div class="font-semibold">{{ category.name }}</div>
-        <div class="text-gray-500">{{ category.description }}</div>
+        <div class="font-semibold dw">{{ category.name }}</div>
+        <div class="text-gray-500 dw">{{ category.description }}</div>
       </div>
     </div>
     <!-- 移动端下拉菜单按钮 -->

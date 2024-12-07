@@ -14,7 +14,7 @@ const oml2d = loadOml2d({
         {
             path: '/mc506lw/L2DMCVT.model3.json',
             position: [-80, 20],
-            mobilePosition: [80, 80],
+            mobilePosition: [-60, 90],
             scale: 0.08,
             mobileScale: 0.06,
             stageStyle: {
@@ -22,8 +22,8 @@ const oml2d = loadOml2d({
                 width: 200,
             },
             mobileStageStyle: {
-                height: 370,
-                width: 400,
+                height: 350,
+                width: 150,
             },
         },
     ],
